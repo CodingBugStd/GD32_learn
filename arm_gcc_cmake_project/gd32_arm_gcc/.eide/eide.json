@@ -1,0 +1,81 @@
+{
+  "name": "gd32_arm_gcc",
+  "type": "ARM",
+  "dependenceList": [],
+  "srcDirs": [
+    ".eide/deps",
+    "USER",
+    "GD32F4xx_standard_peripheral",
+    "CMSIS"
+  ],
+  "virtualFolder": {
+    "name": "<virtual_root>",
+    "files": [],
+    "folders": []
+  },
+  "outDir": "build",
+  "deviceName": null,
+  "packDir": ".pack/GigaDevice/GD32F4xx_DFP.2.0.0",
+  "miscInfo": {
+    "uid": "134d414df8e24a220450e8865b99861b"
+  },
+  "targets": {
+    "Debug": {
+      "excludeList": [
+        "CMSIS/GD/GD32F4xx/Source/ARM/startup_gd32f405_425.s",
+        "CMSIS/GD/GD32F4xx/Source/ARM/startup_gd32f450_470.s",
+        "CMSIS/GD/GD32F4xx/Source/IAR/startup_gd32f405_425.s",
+        "CMSIS/GD/GD32F4xx/Source/IAR/startup_gd32f450_470.s",
+        "CMSIS/GD/GD32F4xx/Source/IAR/startup_gd32f407_427.s"
+      ],
+      "toolchain": "GCC",
+      "compileConfig": {
+        "cpuType": "Cortex-M4",
+        "floatingPointHardware": "single",
+        "scatterFilePath": "STM32F103RCTx_FLASH.ld",
+        "useCustomScatterFile": true,
+        "storageLayout": {
+          "RAM": [],
+          "ROM": []
+        },
+        "options": "null"
+      },
+      "uploader": "OpenOCD",
+      "uploadConfig": {
+        "bin": "",
+        "target": "${workspaceFolder}/gd32f4xx",
+        "interface": "stlink",
+        "baseAddr": "0x08000000"
+      },
+      "uploadConfigMap": {
+        "JLink": {
+          "bin": "",
+          "baseAddr": "",
+          "cpuInfo": {
+            "vendor": "null",
+            "cpuName": "null"
+          },
+          "proType": 1,
+          "speed": 8000,
+          "otherCmds": ""
+        }
+      },
+      "custom_dep": {
+        "name": "default",
+        "incList": [
+          ".eide/deps",
+          "USER",
+          "CMSIS/GD/GD32F4xx/Include",
+          "CMSIS",
+          "GD32F4xx_standard_peripheral/Include"
+        ],
+        "libList": [],
+        "sourceDirList": [],
+        "defineList": [
+          "GD32F427"
+        ]
+      }
+    }
+  },
+  "version": "3.3"
+}
