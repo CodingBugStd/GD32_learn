@@ -6,12 +6,23 @@
     ".eide/deps",
     "USER",
     "GD32F4xx_standard_peripheral",
-    "CMSIS"
+    "CMSIS",
+    "StartCode"
   ],
   "virtualFolder": {
     "name": "<virtual_root>",
     "files": [],
-    "folders": []
+    "folders": [
+      {
+        "name": "LinkScript",
+        "files": [
+          {
+            "path": "STM32F103RCTx_FLASH.ld"
+          }
+        ],
+        "folders": []
+      }
+    ]
   },
   "outDir": "build",
   "deviceName": null,
