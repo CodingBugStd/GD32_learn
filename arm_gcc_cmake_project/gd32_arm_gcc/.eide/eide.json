@@ -37,7 +37,8 @@
         "CMSIS/GD/GD32F4xx/Source/ARM/startup_gd32f450_470.s",
         "CMSIS/GD/GD32F4xx/Source/IAR/startup_gd32f405_425.s",
         "CMSIS/GD/GD32F4xx/Source/IAR/startup_gd32f450_470.s",
-        "CMSIS/GD/GD32F4xx/Source/IAR/startup_gd32f407_427.s"
+        "CMSIS/GD/GD32F4xx/Source/IAR/startup_gd32f407_427.s",
+        "<virtual_root>/openOCD_cfg"
       ],
       "toolchain": "GCC",
       "compileConfig": {
@@ -54,8 +55,8 @@
       "uploader": "OpenOCD",
       "uploadConfig": {
         "bin": "",
-        "target": "${workspaceFolder}/gd32f4xx",
-        "interface": "stlink",
+        "target": "stm32f4x",
+        "interface": "cmsis-dap",
         "baseAddr": "0x08000000"
       },
       "uploadConfigMap": {

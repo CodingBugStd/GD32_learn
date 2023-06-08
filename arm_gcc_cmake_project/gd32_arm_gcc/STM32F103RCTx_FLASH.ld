@@ -1,4 +1,7 @@
 
+
+/*https://blog.csdn.net/weixin_39177986/article/details/108455827*/
+
 /* 入口函数 -> 在启动文件中定义 */
 ENTRY(Reset_Handler)
 
@@ -87,6 +90,7 @@ SECTIONS
   /* _sidata相对于一个变量，用于给启动文件初始化这块内存 */
   _sidata = LOADADDR(.data);
 
+  /* LMA - > 装载内存地址 */
   /* Initialized data sections goes into RAM, load LMA copy after code */
   .data : 
   {

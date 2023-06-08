@@ -42,6 +42,9 @@ OF SUCH DAMAGE.
     \param[out] none
     \retval     none
 */
+
+uint32_t temp = 0;
+
 int main(void)
 {
     /* configure systick */
@@ -55,6 +58,8 @@ int main(void)
     gpio_output_options_set(GPIOC, GPIO_OTYPE_PP, GPIO_OSPEED_50MHZ, GPIO_PIN_6);
     /* reset LED2 GPIO pin */
     gpio_bit_reset(GPIOC, GPIO_PIN_6);
+
+    temp = SCB->VTOR;
 
     while(1) {
         /* turn on LED2 */
